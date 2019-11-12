@@ -1,0 +1,22 @@
+server:
+  port: 8086
+  tomcat:
+    uri-encoding: utf-8
+  servlet:
+    context-path: /luckymoney
+
+#使用对象配置
+limit:
+  minMoney: 0.01
+  maxMoney: 9999
+  description: 最少要发${limit.minMoney}元钱,最多发${limit.maxMoney}元钱
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ortiot
+    username: root
+    password: luke3040
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
